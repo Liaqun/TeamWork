@@ -1,6 +1,295 @@
-I  m liking Github but its complex. But intresting..
-Goback
+package pack1;
+import java.util.*;
 
-check if new rebase works
+public class trygit {
+	
+	
+	int i =3;
+
+//conditional logic	
+	 String Designation ="CEO";
+	 void cond()
+	 {
+			if(Designation == "CEO")
+			{
+				System.out.println("Hello Sharib");
+			}
+			else if(Designation == "CTO")
+				{
+				System.out.println("Hello Chintan");
+				}
+			else
+				
+				System.out.println("Hello Folks");
+	 }
+//Switch case
+	 void switchh(int v2)
+	 {
+	 
+		 switch (v2) {
+
+	      case 1:
+	    	  
+	        System.out.println("Story will take 1 hour to complete");
+	        break;
+	        
+	      case 2:
+		        System.out.println("Story will take 2 hours to complete");
+		        break;
+		 
+	      case 3:
+		        System.out.println("Story will take 3-4 hours to complete");
+		        break;
+		        
+	      case 5:
+		        System.out.println("Story will take 5-6 hours to complete");
+		        break;
+		        
+	      case 8:
+		        System.out.println("Story will take 7-8 hours to complete");
+		       
+		        
+	 }
+		 
+	 }
+	 
+	 
+//Passing objects to methods
+			void sum(trygit obj2)
+			{
+				i = i + obj2.i;
+				System.out.println("Value of Object one: " + i);
+			}
+		
+			
+//For Loop	
+			void pyramid()
+			{
+				int k=4;
+				for (i=0;i<=4;i++)
+				{
+					int j;
+					for(j=0;j<=i;j++)
+					{
+						System.out.print("* ");
+					}
+					System.out.println("\n");
+
+				}
+
+//While Loop
+				while (k>=0)
+				{
+					int l=0;
+				
+					while(l<=k )
+					{
+						System.out.print("* ");
+	                    l++;
+					}
+					System.out.println("\n");
+					k--;
+				}
+				
+				
+//Do While Loop	(Fibonacci series)		
+			int total=10;
+			int z=1;
+			int num1=0;
+			int num2=1;
+			int sum=0;
+			System.out.print(num1);
+			do
+			{
+			
+			          sum = num1 + num2;
+			          System.out.print(", " + num2);
+			          num1 = num2;
+			          num2= sum;  
+				z++;
+			}
+			while(z<=total);
+			System.out.println("\n");	
+			}
+			
+//Array Addition code
+			void addition()
+			{
+			int ary[]= {1,2,3,4};
+			int add=0;
+			
+			for (int s:ary)
+			{
+				add = add+s;
+			}
+			
+			System.out.println("Sum of the elements of array is:" + add);
+			}
+//Palindrome function	
+			void Palindrome(String sr)
+			{
+			int flag=0;
+				int length = sr.length();
+				for(int i=0; i<length/2; i++) {
+					if(sr.charAt(i) != sr.charAt(length-i-1)) 
+					{
+						flag=1;
+					break;
+					}
+					}
+				if (flag==0)
+					System.out.println(sr + " is Palindrome");
+				else
+				System.out.println(sr + " is not Palindrome");
+
+			}
+			
+//Ternary Operator
+			void ternary()
+			{
+				int n1=1;
+				int n2=3;
+				int max=0;
+			 max = (n1 > n2)? n1 : n2;
+				System.out.println("Value of the larger number is:" + max);
+
+			}
+			
+			void fact(int n)
+			{
+				int result =1;
+				int num = n;
+				if (num==0)
+				{
+					System.out.println("Factorial of " + num + " is " + result);
+				}
+				else
+				{
+				while(num>=1)
+				{
+					result = result*num;
+					num--;
+					
+				}
+				System.out.println("Factorial of " + n + " is " + result);
+
+				}
+				
+			}
+			
+//Matrix Transpose
+			void trans(int A[][]) 
+			{
+				int y, z;
+				
+	
+				 int T[][] = new int[2][2];
+			
+//Print array before Transpose
+				 System.out.println("Array before Transpose \n");
+
+				 for (y = 0; y<2; y++)
+				 {
+				 for (z = 0; z<2; z++)
+					{
+					 System.out.print(A[y][z]);
+					 System.out.print(" ");
+				    }
+					System.out.println("\n");
+						
+				 }
+				
+				
+//Transpose
+				for (y = 0; y<2; y++)
+				{
+					for (z = 0; z<2; z++)
+					{
+					
+					 T[z][y] = A[y][z];
+				    }
+					
+				}
+//Print array after Transpose
+				System.out.println("Array after Transpose \n");
+				for (y = 0; y<2; y++)
+				{
+					for (z = 0; z<2; z++)
+					{
+					 
+					 System.out.print(T[y][z]);
+					 System.out.print(" ");
+				    }
+					System.out.println("\n");
+				}
+				
+			}
+			
+			
+//main method
+			public static <A> void main(String args[])
+			{
+
+	           trygit obj1 = new trygit();
+	           trygit obj2 = new trygit();
+	           obj1.sum(obj2);
+	           System.out.println("Value of object two is: " + obj2.i);
+	           obj2.cond();
+//Call to Pattern function
+	           obj2.pyramid();
+	           
+	           obj1.addition();
+	           
+	           obj1.ternary();
+	           
+	           obj2.fact(10);
+	           
+//Dictionary
+	Hashtable<String,String> dict = new Hashtable<String,String>();
+
+//Put values into dictionary
+	     dict.put("1", "Liaqun");
+	     dict.put("2", "Fajer");
+	     dict.put("3", "Ishrat");
+	     System.out.println("Size of Dictionary is:" + dict.size());
+
+//Get values from dictionary
+	     System.out.println("Value at Key 1:" + dict.get("1"));
+	     System.out.println("Value at Key 2:" + dict.get("2"));
+	     
+//Remove Key value pair from dictionary
+	     dict.remove("3");
+	     System.out.println(dict.get("3"));
+	     
+//Size of Dictionary   
+	     System.out.println("Size of Dictionary after removing a pair is:" + dict.size());
+	     
+//Check if dictionary is empty
+	     System.out.println("Dictionary Empty:" + dict.isEmpty());
+	     	    		 
+	     
+//Array List for matrix transpose	 
+		 int A[][] = {{1,2},{3,4}};
+	     obj1.trans(A);
+	     
+	     
+//Read a String for the Palindrome function
+	     Scanner sc = new Scanner(System.in);
+	     String str= sc.nextLine();
+	     obj1.Palindrome(str);
+	     
+	     
+//Read any number from user for Switch case 
+		 Scanner v = new Scanner(System.in);
+	      int v2 = v.nextInt();
+	      obj2.switchh(v2);
+	      v.close();
+	      sc.close();
+	           
+			}         
+	           
+			
+}
+
 
 
